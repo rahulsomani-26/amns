@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+header,footer{
+    height:10vh;
+    background-color: rgb(41, 39, 39);
+    color:orangered;
+}
+footer{
+    text-align: center;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+ul li{
+    list-style-type:none ;
+}
+ul li a {
+    text-decoration: none;
+    color:orangered;
+    font-size: 1.2em;
+
+
+
+}
+main{
+    height:80vh;
+}
