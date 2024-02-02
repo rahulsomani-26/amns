@@ -1,0 +1,27 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{%static 'css/main.css' %}">
+</head>
+<body>
+    {% for todos in obj %}
+    <div class="container">
+        <ul>
+            <li>{{todos.title}}</li>
+            <li>{{todos.description}}</li>
+            <li>{{todos.creation_date}}</li>
+        </ul>
+    <form action="{% url 'delete' todos.id %}" method="POST">
+        {%csrf_token%}
+        <button type="submit" class="cta">Delete</button>
+    </form>
+
+    </div>
+    {% endfor %}
+    
+</body>
+</html>
